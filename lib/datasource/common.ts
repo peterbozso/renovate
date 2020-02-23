@@ -1,4 +1,5 @@
 import { DATASOURCE_FAILURE } from '../constants/error-messages';
+import { DeprecationReplacement } from './npm/replacements';
 
 export interface GetReleasesConfig {
   lookupName: string;
@@ -36,6 +37,7 @@ export interface ReleaseResult {
   changelogUrl?: string;
   dependencyUrl?: string;
   deprecationMessage?: string;
+  deprecationReplacement?: DeprecationReplacement;
   display?: string;
   dockerRegistry?: string;
   dockerRepository?: string;
