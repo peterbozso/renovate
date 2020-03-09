@@ -1,4 +1,5 @@
 import { DATASOURCE_FAILURE } from '../constants/error-messages';
+import { PackageRule } from '../config/common';
 
 export interface GetReleasesConfig {
   lookupName: string;
@@ -17,6 +18,7 @@ export interface PkgReleaseConfig extends Config {
   compatibility?: Record<string, string>;
   npmrc?: string;
   versioning?: string;
+  packageRules?: PackageRule[];
 }
 
 export type DigestConfig = Config;
